@@ -7,19 +7,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
             background: #f4f4f4;
             color: #333;
         }
-
-        /* Header */
         header {
             background: #0044cc;
             color: white;
@@ -27,127 +21,89 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
             border-bottom: 4px solid #002a80;
         }
-
         header h1 {
             margin: 0;
             font-size: 1.8em;
         }
-
-        /* Navbar */
         nav {
             display: flex;
-            gap: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
         }
-
         nav a {
             color: white;
             text-decoration: none;
             font-weight: 600;
             transition: color 0.3s;
+            padding: 5px 10px;
         }
-
         nav a:hover {
             color: #ffcc00;
         }
-
-        /* Responsive Navbar */
-        .menu-toggle {
-            display: none;
-            font-size: 1.8em;
-            cursor: pointer;
-        }
-
         .container {
             max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
+            margin: 20px auto;
+            padding: 15px;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: space-around;
         }
-
-        /* Sections */
         .section {
             background: white;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             margin: 15px;
-            padding: 25px;
-            flex: 1 1 calc(45% - 30px);
+            padding: 20px;
+            flex: 1 1 45%;
             min-width: 300px;
             transition: transform 0.3s;
         }
-
         .section:hover {
             transform: scale(1.02);
         }
-
         .section h2 {
             color: #0044cc;
             border-bottom: 2px solid #0044cc;
             padding-bottom: 10px;
         }
-
         ul {
             list-style: none;
             padding: 0;
         }
-
         ul li {
-            margin: 12px 0;
-            font-size: 1.1em;
+            margin: 10px 0;
+            font-size: 1em;
         }
-
         a {
             text-decoration: none;
             color: #0044cc;
             font-weight: bold;
             transition: 0.3s;
         }
-
         a:hover {
             color: #002a80;
         }
-
-        /* Footer */
         footer {
-            margin-top: 50px;
-            padding: 20px;
+            margin-top: 40px;
+            padding: 15px;
             background: #0044cc;
             text-align: center;
             font-weight: bold;
             color: white;
         }
-
-        /* 📱 Mobile Responsive */
+        
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
                 text-align: center;
             }
-
-            .menu-toggle {
-                display: block;
-            }
-
             nav {
-                display: none;
-                flex-direction: column;
-                align-items: center;
-                margin-top: 10px;
+                justify-content: center;
+                gap: 5px;
             }
-
-            nav a {
-                margin: 5px 0;
-            }
-
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
-
             .section {
                 flex: 1 1 100%;
             }
@@ -157,19 +113,16 @@
 <body>
     <header>
         <h1>CODING RESOURCES</h1>
-        <span class="menu-toggle" onclick="toggleMenu()">☰</span>
-        <nav id="nav-menu">
+        <nav>
             <a href="#learning-platforms">Learning Platforms</a>
             <a href="#coding-practice">Coding Practice</a>
             <a href="#youtube-channels">YouTube Channels</a>
             <a href="#learning-strategies">Learning Strategies</a>
         </nav>
     </header>
-
     <div class="container">
         <div class="section" id="learning-platforms">
             <h2>🚀 Best Free Learning Platforms</h2>
-            <p>Structured courses to help you master coding at your own pace.</p>
             <ul>
                 <li><a href="https://www.khanacademy.org/" target="_blank">Khan Academy</a></li>
                 <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
@@ -177,30 +130,24 @@
                 <li><a href="https://cs50.harvard.edu/" target="_blank">CS50 by Harvard</a></li>
             </ul>
         </div>
-
         <div class="section" id="coding-practice">
             <h2>🖥️ Coding Practice</h2>
-            <p>Practice coding and prepare for technical interviews.</p>
             <ul>
                 <li><a href="https://leetcode.com/" target="_blank">LeetCode</a></li>
                 <li><a href="https://www.codewars.com/" target="_blank">CodeWars</a></li>
                 <li><a href="https://www.hackerrank.com/" target="_blank">HackerRank</a></li>
             </ul>
         </div>
-
         <div class="section" id="youtube-channels">
             <h2>📺 Best YouTube Channels</h2>
-            <p>Free video tutorials from top instructors.</p>
             <ul>
                 <li><a href="https://www.youtube.com/c/Freecodecamp" target="_blank">FreeCodeCamp</a></li>
                 <li><a href="https://www.youtube.com/c/TheCodingTrain" target="_blank">The Coding Train</a></li>
                 <li><a href="https://www.youtube.com/c/TraversyMedia" target="_blank">Traversy Media</a></li>
             </ul>
         </div>
-
         <div class="section" id="learning-strategies">
             <h2>📚 Learning Strategies</h2>
-            <p>Effective techniques to enhance your learning process.</p>
             <ul>
                 <li>Use active recall and spaced repetition.</li>
                 <li>Work on projects to reinforce knowledge.</li>
@@ -208,20 +155,8 @@
             </ul>
         </div>
     </div>
-
     <footer>
         <p>&copy; 2025 Master Coding. All rights reserved.</p>
     </footer>
-
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById("nav-menu");
-            if (menu.style.display === "flex") {
-                menu.style.display = "none";
-            } else {
-                menu.style.display = "flex";
-            }
-        }
-    </script>
 </body>
 </html>
